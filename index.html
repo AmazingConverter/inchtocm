@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title> inch to cm -  inches into centimeters - Length Conversion</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>    
+    <div class="container">
+        <main role="main" class="pb-3">            
+			<section>
+				<div class="row calculator">
+					<div class="col-xs-12">
+						<h1>inch to cm - inches into centimeters</h1>
+					</div>
+					<div class="col-xs-12 col-xs-12">
+						<div class="input-group form-group-lg">
+							<input type="number" id="amountMaster" class="form-control" value="1" aria-label="set inch" onchange="Calculate()" onkeyup="Calculate()">
+							<span class="input-group-addon">inch</span>
+							<span class="input-group-addon">=</span>
+							<input type="number" id="amountSlave" class="form-control" value="2.54000" readonly="readonly" aria-label="set cm">
+							<span class="input-group-addon">cm</span>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<a href="https://inchintocm.com/"> inch to cm - inches into centimeters</a>
+					</div>						
+				</div>
+			</section>
+        </main>
+    </div>
+	<script>
+		function Calculate() {
+			var am = parseFloat(document.getElementById("amountMaster").value.replace(",", "."));
+			var uf = parseFloat(2.54);
+			document.getElementById("amountSlave").value = (am * uf).toPrecision(10);
+		}
+	</script>
+</body>
+</html>
